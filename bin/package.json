@@ -1,0 +1,13 @@
+{
+  "name": "capital-pro-bono-honor-roll",
+  "description": "a MEAN approach to honoring pro bono in DC",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "mongoose":"*"
+  },
+  "scripts":{
+    "start": "node app.js"
+  }
+}
