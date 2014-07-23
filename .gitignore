@@ -1,0 +1,4 @@
+env/
+honorroll/db.sqlite3
+*.pyc
+
