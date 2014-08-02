@@ -4,3 +4,5 @@ django-mptt
 django-haystack
 requests
 pyelasticsearch
+django-bootstrap-form
+django-tastypie
