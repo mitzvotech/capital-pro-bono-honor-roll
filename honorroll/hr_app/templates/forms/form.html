@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load mptt_tags %}
+{% load bootstrap %}
+
+{% block content %}
+<div class="container">
+<form action="" method="post">
+{% csrf_token %}
+<div class="row">
+<div class="col-md-6">
+{{form | bootstrap}}
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<label class="control-label" for="id_organization">Organization</label>
+<div class="input-group">
+<select class="form-control" id="id_organization" name="organization_name">
+{% for org in orgs %}
+<option>{{org}}</option>
+{% endfor %}
+</select>
+<span class="input-group-btn">
+<button type="button" class="btn btn-primary" id="add_org" data-toggle="modal" data-target="#new_org_modal">Add New</button>
+</span>
+</div>
+</div>
+{{ hform | bootstrap }}
+</div>
+</div>
+<button type="submit" class="btn btn-success" id="submit">SAVE</button>
+</form>
+</div>
+<div class="modal fade" id="new_org_modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Add new Organization</h4>
+      </div>
+      <div class="modal-body">
+        <input id="new_org_input" type="text" name="new_org_input" value="" placeholder="New Organization">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="new_org_save" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+{% endblock content %}
