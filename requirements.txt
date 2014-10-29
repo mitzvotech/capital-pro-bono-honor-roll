@@ -7,3 +7,4 @@ pyelasticsearch
 django-bootstrap-form
 django-tastypie
 django-toolbelt
+djorm-ext-pgfulltext
