@@ -23,5 +23,6 @@ urlpatterns = [
     # url(r'^api/honoree/(?P<pk>[0-9]+)/$', views.HonoreeDetailView.as_view(), name='honoree-view'),
 	url(r'^create/', views.AddOrgHonoreeHonorForm),
 	url(r'^api/', include(v1_api.urls)),
-	url(r'^search/', include('haystack.urls')),
+	# url(r'^search/', include('haystack.urls')),
+	url(r"^search/", include("watson.urls", namespace="watson")),
 ]

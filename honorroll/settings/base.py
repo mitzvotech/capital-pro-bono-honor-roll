@@ -36,13 +36,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'south',
     'mptt',
     'honorroll',
     'hr_app',
     'bootstrapform',
     'tastypie',
-    'haystack'
+    # 'haystack'
+    'watson',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -90,14 +90,16 @@ STATIC_URL = '/static/'
 
 TEMPLATE_DIRS = (
     PROJECT_PATH + '/templates/'
-)
+,)
 
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
-        'URL': 'http://127.0.0.1:9200/',
-        'INDEX_NAME': 'honorroll',
-    },
-}
+# HAYSTACK_CONNECTIONS = {
+#     'default': {
+#         'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+#         'URL': 'http://127.0.0.1:9200/',
+#         'INDEX_NAME': 'honorroll',
+#     },
+# }
+
+
 
 TASTYPIE_DEFAULT_FORMATS = ['json']

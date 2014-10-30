@@ -13,7 +13,6 @@ class HonoreeResource(ModelResource):
 			'email': ALL,
 		}
 
-
 class HonorResource(ModelResource):
 	honoree = fields.ForeignKey(HonoreeResource, 'parent')
 

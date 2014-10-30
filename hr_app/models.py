@@ -2,6 +2,7 @@ from django.db import models
 from django.core.urlresolvers import reverse
 from datetime import date
 from mptt.models import MPTTModel, TreeForeignKey
+import watson
 
 class Organization(MPTTModel):
 	organization_name = models.CharField(max_length=200)
@@ -64,3 +65,5 @@ class Honor(MPTTModel):
 
 	def __str__(self):
 		return str(self.parent) + ":" + self.year
+
+watson.register(Honoree)

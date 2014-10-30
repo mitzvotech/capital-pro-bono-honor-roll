@@ -21,6 +21,10 @@
         <![endif]-->
         <div class="container jumbotron">
         <h1><a href="/">Capital Pro Bono Honor Roll</a></h1>
+        <form action="{% url 'watson:search' %}">
+    <input name="q" value="{{request.GET.q}}">
+    <input type="submit" value="Go">
+</form>
         </div>
       {% block content %}
 

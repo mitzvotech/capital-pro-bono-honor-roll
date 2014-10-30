@@ -1,5 +1,4 @@
-django
-south
+Django==1.7
 django-mptt
 django-haystack
 requests
@@ -7,4 +6,3 @@ pyelasticsearch
 django-bootstrap-form
 django-tastypie
 django-toolbelt
-djorm-ext-pgfulltext
